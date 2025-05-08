@@ -1,0 +1,6 @@
+<div class="h-96 w-full bg-gray-200 rounded-lg overflow-hidden">
+    <%= image_tag(post.images.first, class: "w-full h-64 object-cover") if post.images.any? %>
+    <p class="text-xl"><%= post.caption %></p>
+    <p class="text-xl">by<%= post.user.email %></p>
+    <p class="text-xl"><%= post.body.body.to_plain_text.first(50) %></p>
+</div>
